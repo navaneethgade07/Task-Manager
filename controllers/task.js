@@ -43,7 +43,7 @@ const getTasks= async (req,res) =>{
 };
 const updateTasks = async(req,res) =>{
     try {
-        const task  = await Task.updateOne({name:req.params.name},req.body);
+        const task  = await Task.updateOne({name:req.params.name},req.body,{new:true});
         res.json({task});
     } catch (error) {
         res.status(500).json({msg:error});

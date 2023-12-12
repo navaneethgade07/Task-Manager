@@ -1,5 +1,4 @@
 const mongoose = require('mongoose');
-
 // defining the schema
 const createSchema = new mongoose.Schema({
     name:{
